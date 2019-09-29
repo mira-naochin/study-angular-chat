@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-color: rgba(255, 251, 251, 0.78);
+}
+
+/***
+ * ハロウィンカラー
+ */
+.bg-h-orange {
+  background: #DB5425;
+}
+
+.bg-h-darkbrawn {
+  background: #5D310C;
+}
+
+.bg-h-brawn {
+  background: #955629;
+}
+
+.bg-h-black {
+  background: #231815;
+}

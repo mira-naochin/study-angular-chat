@@ -1,0 +1,40 @@
+<div class="page">
+  <section class="card">
+    <form class="form-signup" (ngSubmit)="submitSignUp($event)" #signUpForm="ngForm">
+      <h2 class="form-signup-heading">アカウント作成</h2>
+      <label for="inputName" class="sr-only">Name</label>
+      <input type="text" name="name"
+             id="inputName" class="form-control"
+             placeholder="Name"
+             [(ngModel)]="account.name"
+             #name="ngModel"
+             autocomplete="username" required autofocus>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" name="email"
+             id="inputEmail" class="form-control"
+             placeholder="Email address"
+             [(ngModel)]="account.email"
+             #email="ngModel"
+             autocomplete="username email" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password"
+             id="inputPassword" class="form-control"
+             placeholder="Password"
+             [(ngModel)]="account.password"
+             #password="ngModel"
+             autocomplete="new-password" required>
+      <label for="confirmationPassword" class="sr-only">Password</label>
+      <input type="password" name="password_confirmation"
+             id="confirmationPassword" class="form-control"
+             placeholder="Password Confirmation"
+             [(ngModel)]="account.password_confirmation"
+             #password_confirmation="ngModel"
+             autocomplete="new-password" required>
+      <button class="btn btn-lg btn-success btn-block"
+              type="submit" [disabled]="!signUpForm.form.valid">
+        新規登録
+      </button>
+      <button class="btn btn-lg btn-light btn-block" routerLink="/account/login">ログイン</button>
+    </form>
+  </section>
+</div>
